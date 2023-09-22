@@ -2,52 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://philoartist.gitub.io/pt/categories/</loc>
+    <loc>https://philoartist.github.io/pt/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://philoartist.gitub.io/categories/"
+                href="https://philoartist.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://philoartist.gitub.io/pt/categories/"
+                href="https://philoartist.github.io/pt/categories/"
                 />
   </url><url>
-    <loc>https://philoartist.gitub.io/pt/</loc>
+    <loc>https://philoartist.github.io/pt/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://philoartist.gitub.io/"
+                href="https://philoartist.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://philoartist.gitub.io/pt/"
+                href="https://philoartist.github.io/pt/"
                 />
   </url><url>
-    <loc>https://philoartist.gitub.io/pt/series/</loc>
+    <loc>https://philoartist.github.io/pt/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://philoartist.gitub.io/series/"
+                href="https://philoartist.github.io/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://philoartist.gitub.io/pt/series/"
+                href="https://philoartist.github.io/pt/series/"
                 />
   </url><url>
-    <loc>https://philoartist.gitub.io/pt/tags/</loc>
+    <loc>https://philoartist.github.io/pt/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://philoartist.gitub.io/tags/"
+                href="https://philoartist.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://philoartist.gitub.io/pt/tags/"
+                href="https://philoartist.github.io/pt/tags/"
                 />
   </url>
 </urlset>
