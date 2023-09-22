@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "styles.css",
-	"sourceRoot": "D:/Github Repository/Hugo_Blog_Philoartist",
+	"sourceRoot": "D:/Github Repository/philoartist.github.io_hugo",
 	"sources": [
 		"themes/hugo-clarity/assets/sass/main.sass",
 		"themes/hugo-clarity/assets/sass/_variables.sass",

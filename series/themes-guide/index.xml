@@ -10,10 +10,10 @@
     <lastBuildDate>Fri, 22 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://philoartist.github.io/series/themes-guide/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>认知 01E</title>
-      <link>https://philoartist.github.io/post/perception_01e/</link>
+      <link>https://philoartist.github.io/post/cognitive_journey/cognitive_01e/</link>
       <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://philoartist.github.io/post/perception_01e/</guid>
+      <guid>https://philoartist.github.io/post/cognitive_journey/cognitive_01e/</guid>
       <description>
         
           
@@ -84,6 +84,54 @@
         
           
             &lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>GithubPages&#43;Hugo搭建博客</title>
+      <link>https://philoartist.github.io/post/build_blog/build_blog_tutorial/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://philoartist.github.io/post/build_blog/build_blog_tutorial/</guid>
+      <description>
+        
+          
+            【2023-09-22更新】
+如果你不会Web前端开发，也不愿意花钱买服务器，懒洋洋地做个伸手党，只希望专注于内容创作...... 那么Github Pages + Hugo绝对适合你！
+Why Github Pages? 免费！创建和管理都很方便！
+只需在Github上创建一个repository，然后将Hugo生成的静态页面相关文件push到项目上，一切就搞定啦！
+注：个人主页&amp;lt;username&amp;gt;.github.io的话push到默认的master分支上，普通repository则push到该项目的gh-pages分支上并保证根目录有一个index.html文件。
+Why Hugo? 目前流行的几个静态网站生成器（SSG——Static Site Generator）：Hugo、Hexo、Jekyll。
+Hugo官方主页：https://gohugo.io
+Hugo是使用Go语言编写的静态网站生成器。 相对于Jekyll复杂的安装设置来说，Hugo进行需要下载一个二进制文件（hogo.exe）即可轻松调试和生成静态页面。 Hugo生成静态页码的效率很高，速度上来说Hugo&amp;gt;Hexo&amp;gt;Jekyll。 Hugo自带watch的调试模式，可以在修改Markdown的文章内容的同时，自动更新浏览器页面呈现最终效果。 缺点是主题模板相对其他两个来说数量比较少，用的人感觉还不算特别多，中文社区支持也不是很多。 Prepared （一）Git &amp;amp; Github 下载安装 Git下载：https://git-scm.com/download TortoiseGit下载：https://tortoisegit.org/download/ 安装完成后，在开始菜单里找到Git -&amp;gt; Git Bash，蹦出一个命令行窗口说明Git安装成功。
+1#Git Bash命令行输入 2git config --global user.name &amp;#34;Your Name&amp;#34; 3git config --global user.email email@example.com 因为Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址。
+注意git config命令的--global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置。
+直接在你的目标文件夹里右键Git Bash Here，即可在当前目录中创建命令行窗口。
+创建Github账户 进入GitHub官方主页注册自己的GitHub账户，登陆个人主页http://github.com/&amp;lt;username&amp;gt;。
+右上角点击+号新建仓库（New Repository），仓库命名为&amp;lt;username&amp;gt;.github.io，注意username需要与注册时保持一致。
+SSH Key 1#生成密钥 2ssh-keygen -t rsa -C &amp;#34;username@xxx.com&amp;#34; -f ~/.ssh/filename 并将public key的内容并添加到仓库的设置中。
+（二）Hugo 详细安装指南请参考：https://gohugo.
+          
+          
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>搭建博客Q&amp;A</title>
+      <link>https://philoartist.github.io/post/build_blog/build_blog_qa/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://philoartist.github.io/post/build_blog/build_blog_qa/</guid>
+      <description>
+        
+          
+            1.如何在 Github Pages 中输入数学公式？ 1&amp;lt;script type=&amp;#34;text/javascript&amp;#34; 2src=&amp;#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;#34;&amp;gt; 3&amp;lt;/script&amp;gt; 4 5&amp;lt;script type=&amp;#34;text/x-mathjax-config&amp;#34;&amp;gt; 6	MathJax.Hub.Config({ 7	extensions: [&amp;#34;tex2jax.js&amp;#34;], 8	jax: [&amp;#34;input/TeX&amp;#34;, &amp;#34;output/HTML-CSS&amp;#34;], 9	tex2jax: { 10	inlineMath: [ [&amp;#39;$&amp;#39;,&amp;#39;$&amp;#39;] ], 11	displayMath: [ [&amp;#39;$$&amp;#39;,&amp;#39;$$&amp;#39;] ], 12	processEscapes: true 13	}, 14	&amp;#34;HTML-CSS&amp;#34;: { availableFonts: [&amp;#34;TeX&amp;#34;] }, 15	messageStyle: &amp;#34;none&amp;#34; 16	}); 17&amp;lt;/script&amp;gt; 18 19 20# markdown内容 21使用2个dollar符号括起来可以让公式单独显示一行$$\prod(1+1)$$ 写作markdown文件时发现用$$标记的公式内容无法在网页上正常解析成数学公式，只能显示原有内容。**解决办法：**使用 Mathjax 渲染数学公式。 需要找到你使用的Hugo Themes文件夹里的&amp;lt;your site&amp;gt;\themes\&amp;lt;theme name&amp;gt;\layouts\_default\baseof.html文件， 打开后在&amp;lt;head&amp;gt;里加入右侧代码。
+使用2个dollar符号括起来可以让公式单独显示一行$$\prod(1+1)$$
+2.如何开启双语界面？ 1# 原有内容，说明网站现在是英文的 2[languages.en] 3 languageCode = &amp;#34;en-us&amp;#34; 4# 在其后面添加中文 5[languages.
           
           
         
