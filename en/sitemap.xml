@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://philoartist.github.io/</loc>
-    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+    <lastmod>2023-08-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://philoartist.github.io/categories/</loc>
-    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+    <lastmod>2023-08-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -29,10 +29,10 @@
                 />
   </url><url>
     <loc>https://philoartist.github.io/post/</loc>
-    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+    <lastmod>2023-08-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://philoartist.github.io/series/</loc>
-    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+    <lastmod>2023-08-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -45,22 +45,40 @@
                 />
   </url><url>
     <loc>https://philoartist.github.io/series/themes-guide/</loc>
-    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+    <lastmod>2023-08-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://philoartist.github.io/post/cognitive_journey/cognitive_021/</loc>
-    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+    <loc>https://philoartist.github.io/post/cognitive_journey/cognitive_009/</loc>
+    <lastmod>2023-08-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://philoartist.github.io/categories/%E8%AE%A4%E7%9F%A5%E4%B9%8B%E6%97%85/</loc>
-    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
+    <lastmod>2023-08-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://philoartist.github.io/post/cognitive_journey/cognitive_020/</loc>
-    <lastmod>2023-09-27T00:00:00+00:00</lastmod>
+    <loc>https://philoartist.github.io/post/cognitive_journey/cognitive_008/</loc>
+    <lastmod>2023-08-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://philoartist.github.io/post/cognitive_journey/cognitive_01f/</loc>
-    <lastmod>2023-09-24T00:00:00+00:00</lastmod>
+    <loc>https://philoartist.github.io/post/cognitive_journey/cognitive_007/</loc>
+    <lastmod>2023-08-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://philoartist.github.io/post/cognitive_journey/cognitive_01e/</loc>
-    <lastmod>2023-09-22T00:00:00+00:00</lastmod>
+    <loc>https://philoartist.github.io/post/cognitive_journey/cognitive_006/</loc>
+    <lastmod>2023-08-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://philoartist.github.io/post/cognitive_journey/cognitive_005/</loc>
+    <lastmod>2023-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://philoartist.github.io/post/cognitive_journey/cognitive_004/</loc>
+    <lastmod>2023-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://philoartist.github.io/post/cognitive_journey/cognitive_003/</loc>
+    <lastmod>2023-08-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://philoartist.github.io/post/cognitive_journey/cognitive_002/</loc>
+    <lastmod>2023-08-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://philoartist.github.io/post/cognitive_journey/cognitive_001/</loc>
+    <lastmod>2023-08-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://philoartist.github.io/post/cognitive_journey/cognitive_000/</loc>
+    <lastmod>2023-08-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://philoartist.github.io/tags/hugo/</loc>
     <lastmod>2022-03-24T00:00:00+00:00</lastmod>
