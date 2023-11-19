@@ -9,6 +9,23 @@
   
   >
   <head>
+    <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+          inlineMath: [ ['$','$'] ],
+          displayMath: [ ['$$','$$'] ],
+          processEscapes: true
+        },
+        "HTML-CSS": { availableFonts: ["TeX"] },
+        messageStyle: "none"
+      });
+    </script>
 <title>GithubPages&#43;Hugo搭建博客 | Philoartist</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -212,7 +229,7 @@ Why Github Pages? 免费！创建和管理都很方便！
 <h2 id="why-github-pages">Why Github Pages?</h2>
 <p><strong>免费！创建和管理都很方便！</strong></p>
 <p>只需在Github上创建一个repository，然后将Hugo生成的静态页面相关文件push到项目上，一切就搞定啦！</p>
-<p><span style="color: gray; font-size: smaller;">注：个人主页<code>&lt;username&gt;.github.io</code>的话push到默认的master分支上，普通repository则push到该项目的gh-pages分支上并保证根目录有一个index.html文件。</span></p>
+<p><span style="color: gray; font-size: smaller;">注：个人主页<code>username.github.io</code>的话push到默认的master分支上，普通repository则push到该项目的gh-pages分支上并保证根目录有一个index.html文件。</span></p>
 <h2 id="why-hugo">Why Hugo?</h2>
 <p>目前流行的几个静态网站生成器（SSG——Static Site Generator）：Hugo、Hexo、Jekyll。</p>
 <p>Hugo官方主页：<a href="https://gohugo.io">https://gohugo.io</a></p>
@@ -242,8 +259,8 @@ Why Github Pages? 免费！创建和管理都很方便！
 <ol start="2">
 <li>创建Github账户</li>
 </ol>
-<p>进入<a href="https://github.com/">GitHub官方主页</a>注册自己的GitHub账户，登陆个人主页<code>http://github.com/&lt;username&gt;</code>。</p>
-<p>右上角点击+号新建仓库（New Repository），仓库命名为<code>&lt;username&gt;.github.io</code>，注意<code>username</code>需要与注册时保持一致。</p>
+<p>进入<a href="https://github.com/">GitHub官方主页</a>注册自己的GitHub账户，登陆个人主页<code>http://github.com/username</code>。</p>
+<p>右上角点击+号新建仓库（New Repository），仓库命名为<code>username.github.io</code>，注意<code>username</code>需要与注册时保持一致。</p>
 <ol start="3">
 <li>SSH Key</li>
 </ol>
@@ -259,20 +276,26 @@ Why Github Pages? 免费！创建和管理都很方便！
 <li>使用Scoop包管理器来管理Windows软件，一行代码搞定安装和卸载，干净又迅速。打开Windows PowerShell命令行，注意不要手欠开管理员模式。</li>
 </ol>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln"> 1</span><span class="cl">set-executionpolicy remotesigned -scope currentuser
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="nv">$env</span>:SCOOP<span class="o">=</span><span class="s1">&#39;D:\Scoop&#39;</span>      <span class="c1"># 这里可以替换到你自定义的安装目录</span>
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="o">[</span>environment<span class="o">]</span>::setEnvironmentVariable<span class="o">(</span><span class="s1">&#39;SCOOP&#39;</span>,<span class="nv">$env</span>:SCOOP,<span class="s1">&#39;User&#39;</span><span class="o">)</span>
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">iex <span class="o">(</span>new-object net.webclient<span class="o">)</span>.downloadstring<span class="o">(</span><span class="s1">&#39;https://get.scoop.sh&#39;</span><span class="o">)</span>
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="c1"># 可能需要开vpn来访问github</span>
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="c1"># 一行代码即可安装和卸载</span>
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">scoop install hugo          <span class="c1"># 安装Hugo的standard版本，D:\Scoop\apps会出现hugo文件夹</span>
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">scoop install hugo-extended <span class="c1">#如需安装extended版本</span>
-</span></span><span class="line"><span class="ln">10</span><span class="cl">scoop install sass          <span class="c1"># 安装Dart Sass</span>
-</span></span><span class="line"><span class="ln">11</span><span class="cl">
-</span></span><span class="line"><span class="ln">12</span><span class="cl">scoop uninstall hugo        <span class="c1"># 卸载Hugo超简单</span>
-</span></span><span class="line"><span class="ln">13</span><span class="cl">scoop uninstall scoop       <span class="c1"># 卸载Scoop超简单</span>
-</span></span><span class="line"><span class="ln">14</span><span class="cl">
-</span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="c1"># 其他软件安装参考 https://github.com/h404bi/dorado/blob/master/README_CN.md</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="c1"># 这里可以替换到你自定义的安装目录</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="nv">$env</span>:SCOOP<span class="o">=</span><span class="s1">&#39;D:\Scoop&#39;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="o">[</span>environment<span class="o">]</span>::setEnvironmentVariable<span class="o">(</span><span class="s1">&#39;SCOOP&#39;</span>,<span class="nv">$env</span>:SCOOP,<span class="s1">&#39;User&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">iex <span class="o">(</span>new-object net.webclient<span class="o">)</span>.downloadstring<span class="o">(</span><span class="s1">&#39;https://get.scoop.sh&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="c1"># 可能需要开vpn来访问github</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="c1"># 一行代码即可安装和卸载</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="c1"># 安装Hugo的standard版本，D:\Scoop\apps会出现hugo文件夹</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">scoop install hugo
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="c1">#如需安装extended版本</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">scoop install hugo-extended
+</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="c1"># 安装Dart Sass</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">scoop install sass
+</span></span><span class="line"><span class="ln">15</span><span class="cl">
+</span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="c1"># 卸载Hugo超简单</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">scoop uninstall hugo
+</span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="c1"># 卸载Scoop超简单</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl">scoop uninstall scoop
+</span></span><span class="line"><span class="ln">20</span><span class="cl">
+</span></span><span class="line"><span class="ln">21</span><span class="cl"><span class="c1"># 其他软件安装参考 https://github.com/h404bi/dorado/blob/master/README_CN.md</span>
 </span></span></code></pre></div><p>验证是否安装成功：<code>Win+R</code>输入<code>cmd</code>回车，打开命令行窗口/或者直接在目录里右键打开Git Bash</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">hugo <span class="nb">help</span>
 </span></span></code></pre></div><p>如果正常运行则安装成功</p>
@@ -281,11 +304,14 @@ Why Github Pages? 免费！创建和管理都很方便！
 <ol>
 <li>初始化</li>
 </ol>
-<p>1）从刚才新建的Github仓库中拿到地址，比如<code>git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git</code>，用<code>git clone</code>命令拷贝仓库到本地某个目录。</p>
+<p>1）从刚才新建的Github仓库中拿到地址，比如<code>git@github.com:username/username.github.io.git</code>，用<code>git clone</code>命令拷贝仓库到本地某个目录。</p>
 <p>2）另外再创建一个目录，用于存放Hugo工程，然后在该目录下右键点击Git Bash Here，输入命令。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">hugo new site hugo_project  <span class="c1"># 新建网站</span>
-</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nb">cd</span> hugo_project             <span class="c1"># 切换目录</span>
-</span></span><span class="line"><span class="ln">3</span><span class="cl">git init                    <span class="c1"># 初始化仓库</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># 新建网站</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">hugo new site hugo_project
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="c1"># 切换目录</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="nb">cd</span> hugo_project
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="c1"># 初始化仓库</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">git init
 </span></span></code></pre></div><ol start="2">
 <li>下载网站模板</li>
 </ol>
@@ -305,7 +331,7 @@ Why Github Pages? 免费！创建和管理都很方便！
 <p>打开<code>hugo_project</code>根目录下的<code>config.toml</code>文件，修改一些参数：</p>
 <ul>
 <li>title：会显示在网页标签上</li>
-<li>baseURL：需要修改为自己的github.io地址，<code>&lt;username&gt;.github.io</code></li>
+<li>baseURL：需要修改为自己的github.io地址，<code>username.github.io</code></li>
 <li>theme：为使用的主题，对应主题目录名</li>
 </ul>
 <p>其他自定义配置可以自己慢慢研究config.toml文件以及themes/xxx/layouts文件夹里的内容，进行相应修改。</p>
@@ -329,7 +355,7 @@ Why Github Pages? 免费！创建和管理都很方便！
 </ol>
 <p>将<code>public</code>中全部内容拷贝到<code>git clone</code>的本地仓库里，然后<code>commit</code>、<code>push</code>。</p>
 <h2 id="success">Success!!</h2>
-<p>现在就可以打开你的个人主页网址<code>&lt;username&gt;.github.io</code>欣赏成果啦！</p>
+<p>现在就可以打开你的个人主页网址<code>username.github.io</code>欣赏成果啦！</p>
 
     </div>
 

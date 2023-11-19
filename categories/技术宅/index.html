@@ -7,6 +7,23 @@
   
   >
   <head>
+    <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+          inlineMath: [ ['$','$'] ],
+          displayMath: [ ['$$','$$'] ],
+          processEscapes: true
+        },
+        "HTML-CSS": { availableFonts: ["TeX"] },
+        messageStyle: "none"
+      });
+    </script>
 <title>技术宅 | Philoartist</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -216,7 +233,7 @@
 如果你不会Web前端开发，也不愿意花钱买服务器，懒洋洋地做个伸手党，只希望专注于内容创作...... 那么Github Pages + Hugo绝对适合你！
 Why Github Pages? 免费！创建和管理都很方便！
 只需在Github上创建一个repository，然后将Hugo生成的静态页面相关文件push到项目上，一切就搞定啦！
-注：个人主页&lt;username&gt;.github.io的话push到默认的master分支上，普通repository则push到该项目的gh-pages分支上并保证根目录有一个index.html文件。
+注：个人主页username.github.io的话push到默认的master分支上，普通repository则push到该项目的gh-pages分支上并保证根目录有一个index.html文件。
 Why Hugo? 目前流行的几个静态网站生成 …</p>
           
           <br>
@@ -284,7 +301,10 @@ Why Hugo? 目前流行的几个静态网站生成 …</p>
       <div class="excerpt_footer">
         <div class="pale">
           
-            <p>1.如何在 Github Pages 中输入数学公式？ 1&lt;script type=&quot;text/javascript&quot; 2src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt; 3&lt;/script&gt; 4 5&lt;script type=&quot;text/x-mathjax-config&quot;&gt; 6	MathJax.Hub.Config({ 7	extensions: [&quot;tex2jax.js&quot;], 8	jax: …</p>
+            <p>1.如何在 Github Pages 中输入数学公式？ 写作markdown文件时发现用$$标记的公式内容无法在网页上正常解析成数学公式，只能显示原有内容。
+解决办法：使用 Mathjax 渲染数学公式。
+需要找到你使用的Hugo Themes文件夹里的&lt;your site&gt;\themes&amp;lt;theme name&gt;\layouts_default\baseof.html文件， 打开后在&lt;head&gt;里加入下面代码。
+1&lt;script type=&quot;text/javascript&quot; …</p>
           
           <br>
           <a href="https://philoartist.github.io/post/build_blog/build_blog_qa/" title="Read More" class="excerpt_more button">Read More</a>
